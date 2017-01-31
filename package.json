@@ -1,0 +1,20 @@
+{
+  "name": "auth-service",
+  "version": "1.0.0",
+  "description": "login and validation",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "chance cyphers",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.2.1",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.7.8",
+    "morgan": "^1.7.0"
+  }
+}
