@@ -1,6 +1,6 @@
 module.exports = function(app) {
 
-  var User = require('./models/User');
+  var User = require('./models/user');
   var jwt = require("jsonwebtoken");
 
   app.post('/login', function(req, res) {
