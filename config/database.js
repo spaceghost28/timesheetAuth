@@ -1,3 +1,3 @@
 module.exports = {
-    'url' : process.env.DATABASE_URL || 'mongodb://localhost/userDb'
+    'url' : process.env.MONGODB_URI || 'mongodb://localhost/userDb'
 };
