@@ -15,7 +15,7 @@ module.exports = function(app) {
         var token = user.generateJwt();
         res.json({
           "token": token,
-          "user": user.toJson()
+          "user": user
         });
       }
     });
