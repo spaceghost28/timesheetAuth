@@ -22,15 +22,15 @@ module.exports = function(app) {
   });
 
   app.post('/register', function(req, res) {
-    User.findOne({email: req.body.email}, function(err, existingUser) {
+    User.findOne({email: req.body.user.email}, function(err, existingUser) {
       if (err) {
         res.status(400).json(err);
       } else if (existingUser) {
         res.status(401).json({ "message": "that email is already registered"});
       } else {
         var user = new User();
-        user.email = req.body.email;
-        user.setPassword(req.body.password);
+        user.email = req.body.user.email;
+        user.setPassword(req.body.user.password);
         console.log(user);
         user.save(function(err) {
           var token = user.generateJwt();
