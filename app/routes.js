@@ -26,7 +26,7 @@ module.exports = function(app) {
       if (err) {
         res.status(400).json(err);
       } else if (existingUser) {
-        res.status(401).json({ "message": "that email is already registered"});
+        res.status(401).json({ "message": "that email is already registered" });
       } else {
         var user = new User();
         user.email = req.body.user.email;
@@ -34,7 +34,7 @@ module.exports = function(app) {
         console.log(user);
         user.save(function(err) {
           var token = user.generateJwt();
-          res.json({-
+          res.json({
             "token": token,
             "email": user.email
           });
