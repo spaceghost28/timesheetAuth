@@ -34,8 +34,9 @@ module.exports = function(app) {
         console.log(user);
         user.save(function(err) {
           var token = user.generateJwt();
-          res.json({
-            "token": token
+          res.json({-
+            "token": token,
+            "email": user.email
           });
         });
       }
